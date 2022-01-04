@@ -5,10 +5,11 @@ const Headline = styled.h1(`text-xl font-bold`);
 
 const Link = styled.a(`text-m underline`);
 
-const Button = styled.button(`
+const Button = styled.button<{ variant: "primary" | "secondary" }>(props => {
+  return `
   text-sm
   font-semibold
-  bg-gray-800
+  ${props.variant === "primary" ? "bg-sky-400" : "bg-gray-800"}
   text-gray-300
   py-3
   px-4
@@ -18,14 +19,15 @@ const Button = styled.button(`
   focus-visible:ring-2
   focus-visible:ring-gray-700
   focus-visible:ring-offset-2
-  focus-visible:ring-offset-gray-900`);
+  focus-visible:ring-offset-gray-900`;
+});
 
 const Home: NextPage = () => {
   return (
     <main>
       <Headline>Headline</Headline>
       <Link href="/">Link</Link>
-      <Button>Button</Button>
+      <Button variant="primary">Button</Button>
     </main>
   );
 };
