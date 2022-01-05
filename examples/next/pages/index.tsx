@@ -9,8 +9,8 @@ const Button = styled.button<{ variant?: "primary" | "secondary" }>(
   ({ variant }) => `
   text-sm
   font-semibold
-  ${variant === "primary" ? "bg-sky-400" : "bg-gray-800"}
-  text-gray-300
+  ${variant === "primary" ? "bg-sky-400" : "bg-gray-700"}
+  ${variant === "primary" ? "text-white" : "text-gray-300"}
   py-3
   px-4
   rounded-lg
