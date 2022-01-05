@@ -8,18 +8,19 @@ export type Props = Record<string, unknown>;
 export type ClassNamesFn<P extends Props> = (props: P) => string;
 export type StyledFn = typeof styled;
 
-export type PropsWithChildrenAndClassName<P extends Props> = P & {
-  children?: ReactNode | undefined;
-  className?: string;
-};
+export type SFCProps<T extends TagName, P extends Props> = P &
+  JSX.IntrinsicElements[T] & {
+    children?: ReactNode | undefined;
+    className?: string;
+  };
 
-export interface SFC<P extends Props> {
-  (props: PropsWithChildrenAndClassName<P>): ReactElement<any, any> | null;
+export interface SFC<T extends TagName, P extends Props> {
+  (props: SFCProps<T, P>): ReactElement<any, any> | null;
   displayName: string;
 }
 
-export function styled<T extends TagName, P extends Props>(tagName: T, classNames: ClassNamesFn<P>): SFC<P> {
-  const component: SFC<P> = props => {
+export function styled<T extends TagName, P extends Props>(tagName: T, classNames: ClassNamesFn<P>): SFC<T, P> {
+  const component: SFC<T, P> = props => {
     const htmlProps = getHtmlProps(props);
     htmlProps.className = [props.className, classNames(props)].join(" ");
     return createElement(tagName, htmlProps, props.children);
