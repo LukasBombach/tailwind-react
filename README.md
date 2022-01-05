@@ -12,6 +12,14 @@ Tailwind CSS-in-JS solution for react that provides a `styled-components api`
 
 💪 &nbsp; Full TypeScript support
 
+## Installation
+
+```bash
+npm i tailwind-react # yarn add tailwind-react
+```
+
+## Usage
+
 ```tsx
 // components.tsx
 
