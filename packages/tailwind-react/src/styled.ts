@@ -14,7 +14,7 @@ export type PropsWithChildrenAndClassName<P extends Props> = P & {
 };
 
 export interface SFC<P extends Props> {
-  (props: PropsWithChildrenAndClassName<P>): ReactElement<P, any> | null;
+  (props: PropsWithChildrenAndClassName<P>): ReactElement<any, any> | null;
   displayName: string;
 }
 
@@ -22,7 +22,7 @@ export function styled<T extends TagName, P extends Props>(tagName: T, className
   const component: SFC<P> = props => {
     const htmlProps = getHtmlProps(props);
     htmlProps.className = [props.className, classNames(props)].join(" ");
-    return createElement(tagName, props, props.children);
+    return createElement(tagName, htmlProps, props.children);
   };
 
   component.displayName = tagName;

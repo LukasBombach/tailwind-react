@@ -7,10 +7,9 @@ export type TagsApi = {
 };
 
 const tagsApiHandler: ProxyHandler<StyledFn> = {
-  get:
-    (_, tagName: TagName) =>
-    <P extends Props>(classNames: ClassNamesFn<P>): SFC<P> =>
-      styled(tagName, classNames),
+  get: (_, tagName: TagName) => {
+    return <P extends Props>(classNames: ClassNamesFn<P>): SFC<P> => styled(tagName, classNames);
+  },
 };
 
 export const tagsApi = new Proxy(styled, tagsApiHandler) as StyledFn & TagsApi;

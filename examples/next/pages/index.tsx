@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
 import styled from "tailwind-react";
 
-const Headline = styled.h1(`text-xl font-bold`);
+const Headline = styled.h1(() => `text-xl font-bold`);
 
-const Link = styled.a(`text-m underline`);
+const Link = styled.a(() => `text-m underline`);
 
-const Button = styled.button<{ variant: "primary" | "secondary" }>(props => {
+const Button = styled.button<{ variant?: "primary" | "secondary" }>(props => {
   return `
   text-sm
   font-semibold
@@ -27,7 +27,9 @@ const Home: NextPage = () => {
     <main>
       <Headline>Headline</Headline>
       <Link href="/">Link</Link>
-      <Button variant="primary">Button</Button>
+      <Button variant="primary">Primary Button</Button>
+      <Button variant="secondary">Secondary Button</Button>
+      <Button>Default Button</Button>
     </main>
   );
 };
