@@ -25,14 +25,13 @@ npm i tailwind-react # yarn add tailwind-react
 
 import styled from "tailwind-react";
 
-const Headline = styled.h1(`text-xl font-bold`);
+const Headline = styled.h1`text-xl font-bold`;
 
-const Link = styled.a(`text-m underline`);
+const Link = styled.a`text-m underline`;
 
 const Button = styled.button<{ variant?: "primary" | "secondary" }>(
   ({ variant }) => `
-  ${variant === "primary" ? "bg-sky-400" : "bg-gray-700"}
-  ${variant === "primary" ? "text-white" : "text-gray-300"}
+  ${variant === "primary" ? "text-white bg-sky-400" : "text-gray-300 bg-gray-700"}
   text-sm
   font-semibold
   rounded-lg

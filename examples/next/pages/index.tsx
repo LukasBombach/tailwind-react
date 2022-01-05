@@ -14,8 +14,7 @@ const Button = styled.button<ButtonProps>(
   ({ variant }) => `
   text-sm
   font-semibold
-  ${variant === "primary" ? "bg-sky-400" : "bg-gray-700"}
-  ${variant === "primary" ? "text-white" : "text-gray-300"}
+  ${variant === "primary" ? "text-white bg-sky-400" : "text-gray-300 bg-gray-700"}
   py-3
   px-4
   rounded-lg
