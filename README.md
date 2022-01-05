@@ -29,10 +29,12 @@ const Button = styled.button<{ variant?: "primary" | "secondary" }>(
 
 ## todos
 
-- [ ] improved readme / docs
+- [ ] improve readme / docs
 - [ ] infinite args
 - [ ] get rid of shims in lib bundle
 - [ ] benchmark proxy implementation, maybe cache generated fns?
+- [ ] Unit test and stuff
+- [ ] more examples
 - [x] prevent prop passthrough, check bundle size, benchmark implementation
 - [x] clean up messy lib src
 - [x] rename to tailwind-react
