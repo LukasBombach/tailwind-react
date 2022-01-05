@@ -39,6 +39,8 @@ const Button = styled.button<{ variant?: "primary" | "secondary" }>(
 );
 ```
 
+That's it, really ✌️
+
 ## todos
 
 - [ ] improve readme / docs
