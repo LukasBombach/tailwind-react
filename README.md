@@ -3,9 +3,13 @@
 Tailwind CSS-in-JS solution for react that provides a `styled-components api`
 
 🏎 &nbsp; No runtime, zero-cost-abstraction
+
 🔥 &nbsp; No tooling, setup or framework integration required, just import the npm package
+
 🎨 &nbsp; Support for variants
+
 🛠 &nbsp; Works with the official tailwind VSCode plugin
+
 💪 &nbsp; Full TypeScript support
 
 ```tsx
