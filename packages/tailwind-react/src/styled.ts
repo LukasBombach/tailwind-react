@@ -3,16 +3,17 @@ import { getHtmlProps } from "./filterProps";
 
 import type { ReactElement, ReactNode } from "react";
 
-type TagName = keyof JSX.IntrinsicElements;
-type Props = Record<string, unknown>;
-type ClassNamesFn<P extends Props> = (props: P) => string;
+export type TagName = keyof JSX.IntrinsicElements;
+export type Props = Record<string, unknown>;
+export type ClassNamesFn<P extends Props> = (props: P) => string;
+export type StyledFn = typeof styled;
 
-type PropsWithChildrenAndClassName<P extends Props> = P & {
+export type PropsWithChildrenAndClassName<P extends Props> = P & {
   children?: ReactNode | undefined;
   className?: string;
 };
 
-interface SFC<P extends Props> {
+export interface SFC<P extends Props> {
   (props: PropsWithChildrenAndClassName<P>): ReactElement<P, any> | null;
   displayName: string;
 }
