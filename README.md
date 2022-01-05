@@ -14,6 +14,8 @@ Tailwind CSS-in-JS solution for react that provides a `styled-components api`
 
 ## Installation
 
+[Install Tailwind CSS](https://tailwindcss.com/docs/installation) in your project and then run
+
 ```bash
 npm i tailwind-react # yarn add tailwind-react
 ```
