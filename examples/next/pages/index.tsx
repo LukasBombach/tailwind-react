@@ -1,11 +1,16 @@
-import type { NextPage } from "next";
 import styled from "tailwind-react";
+
+import type { NextPage } from "next";
+
+interface ButtonProps {
+  variant?: "primary" | "secondary";
+}
 
 const Headline = styled.h1(() => `text-xl font-bold`);
 
 const Link = styled.a(() => `text-m underline`);
 
-const Button = styled.button<{ variant?: "primary" | "secondary" }>(
+const Button = styled.button<ButtonProps>(
   ({ variant }) => `
   text-sm
   font-semibold
