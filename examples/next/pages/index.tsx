@@ -12,9 +12,9 @@ const Link = styled.a(() => `text-m underline`);
 
 const Button = styled.button<ButtonProps>(
   ({ variant }) => `
+  ${variant === "primary" ? "text-white bg-sky-400" : "text-gray-300 bg-gray-700"}
   text-sm
   font-semibold
-  ${variant === "primary" ? "text-white bg-sky-400" : "text-gray-300 bg-gray-700"}
   py-3
   px-4
   rounded-lg
