@@ -1,14 +1,14 @@
 import { styled } from "./styled";
 
-import type { Props, ClassNamesFn, SFC, TagName, StyledFn } from "./styled";
+import type { ClassNamesFn, SFC, TagName, StyledFn } from "./styled";
 
 export type TagsApi = {
-  [T in TagName]: <P extends Props>(classNames: ClassNamesFn<P>) => SFC<T, P>;
+  [T in TagName]: <P extends {}>(classNames: ClassNamesFn<P>) => SFC<T, P>;
 };
 
 const tagsApiHandler: ProxyHandler<StyledFn> = {
   get: <T extends TagName>(_: StyledFn, tagName: T) => {
-    return <P extends Props>(classNames: ClassNamesFn<P>): SFC<T, P> => styled(tagName, classNames);
+    return <P extends {}>(classNames: ClassNamesFn<P>): SFC<T, P> => styled(tagName, classNames);
   },
 };
 
