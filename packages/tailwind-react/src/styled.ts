@@ -18,7 +18,7 @@ export interface SFC<T extends TagName, P extends {}> {
   displayName: string;
 }
 
-export function styled<T extends TagName, P extends {}>(tagName: T, classNames: ClassNamesFn<P>): SFC<T, P> {
+export function styled<T extends TagName, P extends object>(tagName: T, classNames: ClassNamesFn<P>): SFC<T, P> {
   const component: SFC<T, P> = props => {
     const htmlProps = getHtmlProps(props);
     htmlProps.className = [props.className, classNames(props)].join(" ");
