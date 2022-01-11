@@ -19,7 +19,7 @@ function taggedFn<T extends TagName>(styled: StyledFn, tagName: T) {
     }
 
     if (isTemplateStringsArray(classNames)) {
-      return styled(tagName, () => getClassNameFromTemplateStringsArray(classNames, expr));
+      return styled(tagName, () => getClassNameFromTemplateStringsArray(classNames, ...expr));
     }
   };
 }

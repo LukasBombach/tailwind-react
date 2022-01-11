@@ -6,9 +6,9 @@ interface ButtonProps {
   variant?: "primary" | "secondary";
 }
 
-const Headline = styled.h1(() => `text-xl font-bold`);
+const Headline = styled.h1`text-xl font-bold`;
 
-const Link = styled.a(() => `text-m underline`);
+const Link = styled.a`text-m underline`;
 
 const Button = styled.button<ButtonProps>(
   ({ variant }) => `
