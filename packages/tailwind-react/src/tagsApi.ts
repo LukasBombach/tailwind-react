@@ -2,15 +2,14 @@ import { styled } from "./styled";
 
 import type { ClassNamesFn, SFC, TagName, StyledFn } from "./styled";
 
-function taggedFn<T extends TagName>(
-  styled: StyledFn,
-  tagName: T
-): <P extends {}>(classNames: ClassNamesFn<P>) => SFC<T, P>;
+type FnApi<T extends TagName> = <P extends {}>(classNames: ClassNamesFn<P>) => SFC<T, P>;
+type TemplateApi<T extends TagName> = <P extends {}>(classNames: TemplateStringsArray, ...expr: string[]) => SFC<T, P>;
 
-function taggedFn<T extends TagName>(
-  styled: StyledFn,
-  tagName: T
-): <P extends {}>(classNames: TemplateStringsArray, ...expr: string[]) => SFC<T, P>;
+function taggedFn<T extends TagName>(styled: StyledFn, tagName: T): FnApi<T>;
+// <P extends {}>(classNames: ClassNamesFn<P>) => SFC<T, P>;
+
+function taggedFn<T extends TagName>(styled: StyledFn, tagName: T): TemplateApi<T>;
+// <P extends {}>(classNames: TemplateStringsArray, ...expr: string[]) => SFC<T, P>;
 
 function taggedFn<T extends TagName>(styled: StyledFn, tagName: T) {
   return <P extends {}>(classNames: unknown, ...expr: string[]): SFC<T, P> => {
@@ -38,13 +37,11 @@ function getClassNameFromTemplateStringsArray(classNames: TemplateStringsArray, 
 }
 
 export type TagsApi = {
-  [T in TagName]: <P extends {}>(classNames: ClassNamesFn<P>) => SFC<T, P>;
+  [T in TagName]: FnApi<T> | TemplateApi<T>;
 };
 
 const tagsApiHandler: ProxyHandler<StyledFn> = {
-  get: <T extends TagName>(_: StyledFn, tagName: T) => {
-    return <P extends {}>(classNames: ClassNamesFn<P>): SFC<T, P> => styled(tagName, classNames);
-  },
+  get: taggedFn,
 };
 
 export const tagsApi = new Proxy(styled, tagsApiHandler) as StyledFn & TagsApi;
