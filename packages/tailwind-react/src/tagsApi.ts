@@ -6,11 +6,7 @@ type FnApi<T extends TagName> = <P extends {}>(classNames: ClassNamesFn<P>) => S
 type TemplateApi<T extends TagName> = <P extends {}>(classNames: TemplateStringsArray, ...expr: string[]) => SFC<T, P>;
 
 function taggedFn<T extends TagName>(styled: StyledFn, tagName: T): FnApi<T>;
-// <P extends {}>(classNames: ClassNamesFn<P>) => SFC<T, P>;
-
 function taggedFn<T extends TagName>(styled: StyledFn, tagName: T): TemplateApi<T>;
-// <P extends {}>(classNames: TemplateStringsArray, ...expr: string[]) => SFC<T, P>;
-
 function taggedFn<T extends TagName>(styled: StyledFn, tagName: T) {
   return <P extends {}>(classNames: unknown, ...expr: string[]): SFC<T, P> => {
     if (isClassNamesFn(classNames)) {
@@ -37,7 +33,7 @@ function getClassNameFromTemplateStringsArray(classNames: TemplateStringsArray, 
 }
 
 export type TagsApi = {
-  [T in TagName]: FnApi<T> | TemplateApi<T>;
+  [T in TagName]: FnApi<T> & TemplateApi<T>;
 };
 
 const tagsApiHandler: ProxyHandler<StyledFn> = {
