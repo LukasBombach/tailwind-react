@@ -101,5 +101,8 @@ In this repo you will find many examples for using `tailwind-react` with various
 - **Create React App** `todo`<br />
   [examples/create-react-app](examples/create-react-app)
 
+- **Storybook** `todo`<br />
+  [examples/storybook](examples/storybook)
+
 - **Component Library with Microbundle**<br />
   [examples/component-library](examples/component-library)
