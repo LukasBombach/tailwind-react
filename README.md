@@ -101,6 +101,9 @@ In this repo you will find many examples for using `tailwind-react` with various
 - **Create React App** `todo`<br />
   [examples/create-react-app](examples/create-react-app)
 
+- **Gatsby** `todo`<br />
+  [examples/gatsby](examples/gatsby)
+
 - **Storybook** `todo`<br />
   [examples/storybook](examples/storybook)
 
