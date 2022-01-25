@@ -22,17 +22,51 @@ npm i tailwind-react # yarn add tailwind-react
 
 ## Usage
 
-```tsx
-// components.tsx
+**Create simple components with tailwind class names**
 
+```tsx
 import styled from "tailwind-react";
 
-const Headline = styled.h1`text-xl font-bold`;
+const SimpleButton = styled.button`text-sm text-gray-300 py-3 px-4 bg-gray-800 rounded-lg`;
+```
 
-const Link = styled.a`text-m underline`;
+**You can use multiple lines and spacing for readability**
 
-const Button = styled.button<{ variant?: "primary" | "secondary" }>(
-  ({ variant }) => `
+```tsx
+import styled from "tailwind-react";
+
+const FancyButton = styled.button`
+  text-white
+  font-medium
+  text-sm
+  uppercase
+  leading-snug
+
+  py-4
+  px-14
+  bg-blue-600
+  rounded-full
+  shadow-md
+  
+  hover:bg-blue-700
+  hover:shadow-lg
+
+  active:bg-blue-800 
+  active:shadow-lg
+
+  focus:bg-blue-700
+  focus:shadow-lg
+  focus:outline-none
+  focus:ring-0
+`;
+```
+
+**Create variants by passing a function instead of a template string**
+
+```tsx
+import styled from "tailwind-react";
+
+const Button = styled.button(({ variant }) => `
   ${variant === "primary" ? "text-white bg-sky-400" : "text-gray-300 bg-gray-700"}
   text-sm
   font-semibold
@@ -40,16 +74,10 @@ const Button = styled.button<{ variant?: "primary" | "secondary" }>(
 );
 ```
 
-That's it, really ✌️
-
 ## todos
 
-- [ ] improve readme / docs
-- [ ] infinite args
 - [ ] get rid of shims in lib bundle
-- [ ] benchmark proxy implementation, maybe cache generated fns?
 - [ ] Unit test and stuff
+- [ ] benchmark proxy implementation, maybe cache generated fns?
 - [ ] more examples
-- [x] prevent prop passthrough, check bundle size, benchmark implementation
-- [x] clean up messy lib src
-- [x] rename to tailwind-react
+- [ ] maybe: infinite rest args
