@@ -109,3 +109,6 @@ In this repo you will find many examples for using `tailwind-react` with various
 
 - **Component Library with Microbundle**<br />
   [examples/component-library](examples/component-library)
+
+- **Preact** `todo`<br />
+  [examples/preact](examples/preact)
