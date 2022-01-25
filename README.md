@@ -89,14 +89,14 @@ const Button = styled.button<{ variant?: "primary" }>(
 );
 ```
 
-It's very simple, as it should be.
+_It's very simple, as things should be._
 
 ## Getting started
 
 In this repo you will find many examples for using `tailwind-react` with various frameworks or for specific purposes
 
-- **Next.js**
+- **Next.js**<br />
   [examples/next](examples/next)
 
-- **Component Library with Microbundle**
+- **Component Library with Microbundle**<br />
   [examples/component-library](examples/component-library)
