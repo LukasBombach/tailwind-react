@@ -98,5 +98,8 @@ In this repo you will find many examples for using `tailwind-react` with various
 - **Next.js**<br />
   [examples/next](examples/next)
 
+- **Create React App** `todo`<br />
+  [examples/create-react-app](examples/create-react-app)
+
 - **Component Library with Microbundle**<br />
   [examples/component-library](examples/component-library)
