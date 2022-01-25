@@ -66,11 +66,26 @@ const FancyButton = styled.button`
 ```tsx
 import styled from "tailwind-react";
 
-const Button = styled.button(({ variant }) => `
-  ${variant === "primary" ? "text-white bg-sky-400" : "text-gray-300 bg-gray-700"}
+const Button = styled.button(
+  props => `
+  ${props.variant === "primary" ? "text-white bg-sky-400" : "text-gray-300 bg-gray-700"}
   text-sm
   font-semibold
-  rounded-lg
+  rounded-lg`
+);
+```
+
+**There is full TypeScript support**
+
+```tsx
+import styled from "tailwind-react";
+
+const Button = styled.button<{ variant?: "primary" }>(
+  props => `
+  ${props.variant === "primary" ? "text-white bg-sky-400" : "text-gray-300 bg-gray-700"}
+  text-sm
+  font-semibold
+  rounded-lg`
 );
 ```
 
