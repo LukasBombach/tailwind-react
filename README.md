@@ -1,4 +1,4 @@
-# tailwind-react
+# `tailwind-react`
 
 > Tailwind CSS-in-JS solution for react that provides a `styled-components` api
 
