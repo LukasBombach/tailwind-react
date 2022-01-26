@@ -12,9 +12,7 @@
 
 💪 &nbsp; Full TypeScript support
 
-<table>
-<tr>
-<td>
+## Example
 
 ```tsx
 import styled from "tailwind-react";
@@ -33,14 +31,9 @@ const Button = styled.button`
 const GetStarted = () => <Button>Get Started</Button>;
 ```
 
-</td>
-<td>
+renders this ↓
 
-![](docs/get_started_button.png)
-
-</td>
-</tr>
-</table>
+<img src="https://github.com/LukasBombach/tailwind-react/raw/master/docs/get_started_button.png" height="48" />
 
 ## Installation
 
