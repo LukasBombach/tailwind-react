@@ -2,7 +2,7 @@
 
 <br />
 
-**Tailwind CSS-in-JS solution for React without any downsides**
+**Tailwind CSS-in-JS solution without any downsides**
 
 <br />
 
