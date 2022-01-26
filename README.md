@@ -2,7 +2,7 @@
 
 <br />
 
-**Tailwind CSS-in-JS solution for react that provides a `styled-components` api**
+**Tailwind CSS-in-JS solution for React without any downsides**
 
 <br />
 
