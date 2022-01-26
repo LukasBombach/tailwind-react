@@ -16,6 +16,8 @@
 
 💪 &nbsp; Full TypeScript support
 
+<br />
+
 ## Example
 
 Render this
