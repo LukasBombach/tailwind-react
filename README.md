@@ -24,7 +24,7 @@ Render this
 
 <img src="https://github.com/LukasBombach/tailwind-react/raw/master/docs/get_started_button.png" height="48" />
 
-↓ like so ↓
+like so
 
 ```tsx
 import styled from "tailwind-react";
