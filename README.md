@@ -1,5 +1,7 @@
 # `tailwind-react`
 
+<br />
+
 **Tailwind CSS-in-JS solution without any downsides**
 
 <br />
