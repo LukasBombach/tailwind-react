@@ -14,6 +14,12 @@
 
 ## Example
 
+Render this
+
+<img src="https://github.com/LukasBombach/tailwind-react/raw/master/docs/get_started_button.png" height="48" />
+
+↓ like so ↓
+
 ```tsx
 import styled from "tailwind-react";
 
@@ -30,10 +36,6 @@ const Button = styled.button`
 
 const GetStarted = () => <Button>Get Started</Button>;
 ```
-
-renders this ↓
-
-<img src="https://github.com/LukasBombach/tailwind-react/raw/master/docs/get_started_button.png" height="48" />
 
 ## Installation
 
