@@ -1,6 +1,10 @@
 # `tailwind-react`
 
+<br />
+
 **Tailwind CSS-in-JS solution for react that provides a `styled-components` api**
+
+<br />
 
 🏎 &nbsp; No runtime, zero-cost-abstraction
 
