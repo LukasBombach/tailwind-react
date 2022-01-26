@@ -63,6 +63,8 @@ import styled from "tailwind-react";
 const SimpleButton = styled.button`text-sm text-gray-300 py-3 px-4 bg-gray-800 rounded-lg`;
 ```
 
+<br />
+
 **You can use multiple lines and spacing for readability**
 
 ```tsx
@@ -94,6 +96,8 @@ const FancyButton = styled.button`
 `;
 ```
 
+<br />
+
 **Create variants by passing a function instead of a template string**
 
 ```tsx
@@ -109,6 +113,8 @@ const Button = styled.button(
 
 const GetStarted = () => <Button variant="primary">Get Started</Button>;
 ```
+
+<br />
 
 **There is full TypeScript support**
 
