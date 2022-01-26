@@ -12,6 +12,36 @@
 
 💪 &nbsp; Full TypeScript support
 
+<table>
+<tr>
+<td>
+
+```tsx
+import styled from "tailwind-react";
+
+const Button = styled.button`
+  text-white
+  font-semibold
+  bg-slate-900
+
+  h-12
+  px-6
+  w-full
+
+  rounded-lg`;
+
+const GetStarted = () => <Button>Get Started</Button>;
+```
+
+</td>
+<td>
+
+![](docs/get_started_button.png)
+
+</td>
+</tr>
+</table>
+
 ## Installation
 
 [Install Tailwind CSS](https://tailwindcss.com/docs/installation) in your project and then run
