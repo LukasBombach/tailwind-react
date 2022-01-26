@@ -126,8 +126,6 @@ const GetStarted = () => <Button variant="foobar">Get Started</Button>;
 //                                        ^^^^^^ also nope
 ```
 
-_It's very simple, as things should be._
-
 ## Getting started
 
 In this repo you will find many examples for using `tailwind-react` with various frameworks or for specific purposes
