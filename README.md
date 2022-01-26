@@ -43,6 +43,8 @@ const Button = styled.button`
 const GetStarted = () => <Button>Get Started</Button>;
 ```
 
+<br />
+
 ## Installation
 
 [Install Tailwind CSS](https://tailwindcss.com/docs/installation) in your project and then run
@@ -50,6 +52,8 @@ const GetStarted = () => <Button>Get Started</Button>;
 ```bash
 npm i tailwind-react # yarn add tailwind-react
 ```
+
+<br />
 
 ## Usage
 
@@ -125,6 +129,8 @@ const Button = styled.button<{ variant?: "primary" }>(
 const GetStarted = () => <Button variant="foobar">Get Started</Button>;
 //                                        ^^^^^^ also nope
 ```
+
+<br />
 
 ## Getting started
 
