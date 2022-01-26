@@ -104,6 +104,8 @@ const Button = styled.button(
   font-semibold
   rounded-lg`
 );
+
+const GetStarted = () => <Button variant="primary">Get Started</Button>;
 ```
 
 **There is full TypeScript support**
@@ -113,11 +115,15 @@ import styled from "tailwind-react";
 
 const Button = styled.button<{ variant?: "primary" }>(
   props => `
-  ${props.variant === "primary" ? "text-white bg-sky-400" : "text-gray-300 bg-gray-700"}
+  ${props.variant === "foobar" ? "text-white bg-sky-400" : "text-gray-300 bg-gray-700"}
+                       ^^^^^^ nope
   text-sm
   font-semibold
   rounded-lg`
 );
+
+const GetStarted = () => <Button variant="foobar">Get Started</Button>;
+//                                        ^^^^^^ also nope
 ```
 
 _It's very simple, as things should be._
