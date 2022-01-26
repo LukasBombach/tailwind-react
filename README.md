@@ -2,8 +2,6 @@
 
 **Tailwind CSS-in-JS solution for react that provides a `styled-components` api**
 
-<hr />
-
 🏎 &nbsp; No runtime, zero-cost-abstraction
 
 🔥 &nbsp; No setup, tooling or special framework integration required, just import the npm package
