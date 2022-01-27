@@ -8,7 +8,7 @@
 
 🏎 &nbsp; No runtime, zero-cost-abstraction
 
-🔥 &nbsp; No setup, tooling or special framework integration required, just import the npm package
+💆‍♀️ &nbsp; No setup, tooling or framework integration required, just import the npm package
 
 🎨 &nbsp; Support for variants
 
