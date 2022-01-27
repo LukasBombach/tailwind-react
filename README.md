@@ -6,13 +6,13 @@
 
 <br />
 
+💅 &nbsp; Straightforward styled components api
+
 🏎 &nbsp; No runtime, zero-cost-abstraction
 
 💆‍♀️ &nbsp; No setup, tooling or framework integration required, the npm package "just works"
 
 🎨 &nbsp; Support for variants
-
-🛠 &nbsp; Works with the official tailwind VSCode plugin
 
 💪 &nbsp; Full TypeScript support
 
